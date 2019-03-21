@@ -1,0 +1,57 @@
+int led = D7; //Sets D7 to "led"
+
+void setup() {
+
+pinMode(led, OUTPUT); //Sets D7 to an output
+
+}
+
+void dot() {
+    digitalWrite(led, HIGH);
+    delay(500);
+    digitalWrite(led, LOW);
+    delay(500);              //Displays a Morse code dot when called
+}
+
+void dash() {
+    digitalWrite(led, HIGH);
+    delay(1000);
+    digitalWrite(led, LOW);
+    delay(500);              //Displays a Morse code dash when called
+}
+
+void loop() {
+
+delay(5000); //Delays for 5 seconds
+
+dot();
+dot();
+dot();
+dot(); //H
+
+dot();
+dash();//A
+
+dot();
+dash();
+dot(); //R
+
+dot();
+dash();
+dot(); //R
+
+dot();
+dot(); //I
+
+dot();
+dot();
+dot(); //S
+
+dash();
+dash();
+dash();//O
+
+dash();
+dot(); //N
+
+}
